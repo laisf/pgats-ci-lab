@@ -4,11 +4,6 @@
 name: 'Execução Agendada'
 
 #regras de disparo (gatilhos/triggers)
-#gatilho de exec manual = workflow_disapatch
-
-on:
-  schedule:
-    - cron: '0 6 * * 1' 
 # minuto 
 # hora 
 # dia do mes 1-30
@@ -17,6 +12,9 @@ on:
 # chama-se cron
 # rodar o regressivo toda segunda pela manha
 # trabalhos/trefas dentro do pipeline = jobs
+on:
+  schedule:
+    - cron: '0 6 * * 1' 
 
 jobs:
   e2e-tests:
