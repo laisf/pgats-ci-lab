@@ -38,7 +38,7 @@ jobs:
       - name: Instalando Yarn
         run: npm install -g yarn
 
-      #instacao das dependencias
+      #instalacao das dependencias
       - name: Instalando dependencias
         run: yarn
 
@@ -49,3 +49,9 @@ jobs:
          # Executando testes E2e
       - name: Executando testes E2e
         run: yarn run e2e
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: relatorio
+          path: ./playwright-report
