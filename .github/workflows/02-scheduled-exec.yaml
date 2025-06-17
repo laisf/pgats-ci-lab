@@ -15,6 +15,7 @@ name: 'Execução Agendada'
 on:
   schedule:
     - cron: '0 13 * * *' 
+    workflow_dispatch:
 
 jobs:
   e2e-tests:
