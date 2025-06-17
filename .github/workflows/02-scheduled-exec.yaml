@@ -14,7 +14,7 @@ name: 'Execução Agendada'
 # trabalhos/trefas dentro do pipeline = jobs
 on:
   schedule:
-    - cron: '0 6 * * 1' 
+    - cron: '0 13 * * *' 
 
 jobs:
   e2e-tests:
