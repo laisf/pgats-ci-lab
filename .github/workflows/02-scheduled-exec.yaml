@@ -1,4 +1,4 @@
-# CI de Nivel 01 - disparo agendado a partir de 1 clique
+# CI de Nivel 01 - disparo agendado 
 
 #nome do nosso 'pipeline'
 name: 'Execução Agendada'
