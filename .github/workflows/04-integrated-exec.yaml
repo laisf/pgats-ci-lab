@@ -1,7 +1,7 @@
 # CI de Nivel 01 - disparo dos testes dentro do pipe dev
 
 #nome do nosso 'pipeline'
-name: 'Execução INtegrada'
+name: 'Execução Integrada'
 
 #regras de disparo (gatilhos/triggers)
 #gatilho de exec a partir de outro pipe = workflow_run
@@ -45,7 +45,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -74,5 +73,7 @@ jobs:
     runs-on: unbuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Simulacao do Deploy
         run: echo "simulando deploy com sucesso"
