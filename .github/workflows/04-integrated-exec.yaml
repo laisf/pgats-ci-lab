@@ -68,10 +68,10 @@ jobs:
         with:
           name: relatorio
           path: ./playwright-report
-      
+
   deploy:
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - name: Simulacao do Deploy
         run: echo "simulando deploy com sucesso"

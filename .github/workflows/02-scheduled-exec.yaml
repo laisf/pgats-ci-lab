@@ -1,11 +1,11 @@
-# CI de Nivel 01 - disparo agendado 
+# CI de Nivel 01 - disparo agendado
 
 #nome do nosso 'pipeline'
 name: 'Execução Agendada'
 
 #regras de disparo (gatilhos/triggers)
-# minuto 
-# hora 
+# minuto
+# hora
 # dia do mes 1-30
 # mes 1-12
 # dia da semana
@@ -14,11 +14,10 @@ name: 'Execução Agendada'
 # trabalhos/trefas dentro do pipeline = jobs
 on:
   schedule:
-    - cron: '0 13 * * *' 
+    - cron: '0 13 * * *'
 
 jobs:
   e2e-tests:
-
     #maquina que o job vai executar
     runs-on: ubuntu-latest
 
@@ -42,8 +41,9 @@ jobs:
 
         # instalacao do playwright
       - name: Instalando Playwright
-        run: yarn playwright install
+        run:
+          yarn playwright install
 
-         # Executando testes E2e
+          # Executando testes E2e
       - name: Executando testes E2e
         run: yarn run e2e
